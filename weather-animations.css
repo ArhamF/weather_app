@@ -1,0 +1,52 @@
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-5px) translateX(5px); }
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+.animate-float-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float 3s ease-in-out infinite;
+}
+
+.weather-icon {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.hover-slide-left {
+  transition: transform 0.3s ease;
+}
+
+.hover-slide-left:hover {
+  transform: translateX(-10px);
+}
+
+.hover-fade-in {
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(10px);
+}
+
+.hover-slide-left:hover + .hover-fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
